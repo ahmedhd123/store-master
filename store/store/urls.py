@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-from core.api import ItemView 
+from core.api import ItemView,profileapi
 from core import models
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,7 @@ urlpatterns = [
 
     #api
    path('api/itemapi', ItemView, name='itemapi'),
+   path('api/profile', profileapi, name='profile'),
 
 
 ]
